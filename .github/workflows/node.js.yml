@@ -63,6 +63,6 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             docker pull thaihmcsp/test_upload:latest
-            docker stop my_app || true
-            docker rm my_app || true
-            docker run -d --name my_app -p 3007:80 /test_upload:latest
+            docker stop test_download || true
+            docker rm test_download || true
+            docker run -d --name test_download -p 3007:80 /test_upload:latest
